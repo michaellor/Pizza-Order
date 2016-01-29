@@ -1,6 +1,7 @@
-function Pizza (pizzaSize, pizzaTopping) {
+function Pizza (pizzaSize, pizzaTopping, pizzaQuantity) {
   this.pizzaSize = pizzaSize;
   this.pizzaTopping = pizzaTopping;
+  this.pizzaQuantity = pizzaQuantity;
   this.pizzaPriceTotal;
 }
 
@@ -20,9 +21,22 @@ Pizza.prototype.pizzaTotalPrice = function() {
 
   priceTopping = (this.pizzaTopping * .50)
 
-  totalPrice = price + priceTopping;
-  this.pizzaPriceTotal = totalPrice;
+  totalPrice = (price + priceTopping) * this.pizzaQuantity;
+  this.pizzaPriceTotal = totalPrice
+  console.log(this.pizzaQuantity, totalPrice, this.pizzaPriceTotal);
   return totalPrice;
+}
+
+Pizza.prototype.pizzaFindQuantity = function() {
+
+  this.pizzaQuantity = Math.abs(this.pizzaQuantity);
+  if (this.pizzaQuantity === 0) {
+    this.pizzaQuantity = this.pizzaQuantity + 1;
+  }
+  else {
+    this.pizzaQuantity = this.pizzaQuantity
+  }
+  return this.pizzaQuantity;
 }
 // End of Business Logic
 
