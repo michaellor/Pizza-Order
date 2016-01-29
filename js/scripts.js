@@ -29,7 +29,8 @@ Pizza.prototype.pizzaTotalPrice = function() {
 $(document).ready(function() {
 
   $("#addAnotherPizza").click(function() {
-    $(".form-group").append('<br><br><label for="pizzaSize">Pizza Size</label><br>' +
+    $(".form-group").append('<br><br><div class="addNewPizza">' +
+                          '<label for="pizzaSize">Pizza Size</label><br>' +
                           '<select name="pizzeSize" id="pizzaSizeInput">' +
                             '<option value="Small">Small</option>' +
                             '<option value="Medium">Medium</option>' +
@@ -45,8 +46,9 @@ $(document).ready(function() {
                           '<br>' +
                           '<input type="checkbox" name="toppings"> Olives' +
                           '<input type="checkbox" name="toppings"> Pineapples' +
-                          '<input type="checkbox" name="toppings"> Green Peppers');
-  })
+                          '<input type="checkbox" name="toppings"> Green Peppers' +
+                          '</div>');
+  });
 
 
   $("form#pizzaOrder").submit(function(event) {
