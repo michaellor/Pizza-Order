@@ -30,9 +30,15 @@ $(document).ready(function() {
   $("form#pizzaOrder").submit(function(event) {
     event.preventDefault();
 
-    var selectedPizzaSize = $("input#pizzaSizeInput").val();
+    var selectedPizzaSize = $("#pizzaSizeInput").val();
+    console.log(selectedPizzaSize);
 
-    var selectedPizzaToppings = $("input#pizzaToppingInput").val();
+    var selectedPizzaToppings = ($("input:checkbox:checked").length);
+
+    console.log(selectedPizzaToppings);
 
     var newPizza = new Pizza(selectedPizzaSize, selectedPizzaToppings);
-};
+
+    console.log(newPizza);
+  });
+});
