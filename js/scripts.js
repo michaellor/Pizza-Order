@@ -30,7 +30,7 @@ Pizza.prototype.pizzaTotalPrice = function() {
 Pizza.prototype.pizzaFindQuantity = function() {
 
   this.pizzaQuantity = Math.abs(this.pizzaQuantity);
-  if (this.pizzaQuantity === 0) {
+  if (this.pizzaQuantity <= 0) {
     this.pizzaQuantity = this.pizzaQuantity + 1;
   }
   else {
@@ -43,7 +43,8 @@ Pizza.prototype.pizzaFindQuantity = function() {
 $(document).ready(function() {
 
   $("#addAnotherPizza").click(function() {
-    $(".form-group").append('<br><br><div class="addNewPizza">' +
+    $(".form-group").append('<br><br><strong id="redtext">Feature not working yet!</strong><br>' +
+                          '<div class="addNewPizza">' +
                           '<label for="pizzaSize">Pizza Size</label><br>' +
                           '<select name="pizzeSize" id="pizzaSizeInput">' +
                             '<option value="Small">Small</option>' +
@@ -62,6 +63,24 @@ $(document).ready(function() {
                           '<input type="checkbox" name="toppings"> Pineapples' +
                           '<input type="checkbox" name="toppings"> Green Peppers' +
                           '</div>');
+  });
+
+  $("#carryout-form").one('click', function() {
+    $("#carryout-form-output").append('<br><label for="carryout-form">' +
+                            '<span class="glyphicon glyphicon-earphone"></span> Phone Number:</label>' +
+                            ' <input type="text" class="form-inline">' +
+                            ' <br><label for="carryout-form">' +
+                            '<span class="glyphicon glyphicon-time"></span> Pickup Time:</label>' +
+                            ' <input type="text" class="form-inline">');
+  });
+
+  $("#delivery-form").one('click', function() {
+    $("#delivery-form-output").append('<br><label for="carryout-form">' +
+                            '<span class="glyphicon glyphicon-earphone"></span> Phone Number:</label>' +
+                            ' <input type="text" class="form-inline">' +
+                            ' <br><label for="carryout-form">' +
+                            '<span class="glyphicon glyphicon-time"></span> Pickup Time:</label>' +
+                            ' <input type="text" class="form-inline">');
   });
 
 
