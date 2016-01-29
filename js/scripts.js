@@ -24,3 +24,15 @@ Pizza.prototype.pizzaTotalPrice = function() {
 
   return totalPrice;
 }
+// End of Business Logic
+
+$(document).ready(function() {
+  $("form#pizzaOrder").submit(function(event) {
+    event.preventDefault();
+
+    var selectedPizzaSize = $("input#pizzaSizeInput").val();
+
+    var selectedPizzaToppings = $("input#pizzaToppingInput").val();
+
+    var newPizza = new Pizza(selectedPizzaSize, selectedPizzaToppings);
+};
