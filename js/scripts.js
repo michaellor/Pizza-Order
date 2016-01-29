@@ -1,7 +1,7 @@
 function Pizza (pizzaSize, pizzaTopping) {
   this.pizzaSize = pizzaSize;
   this.pizzaTopping = pizzaTopping;
-  this.pizzaPriceTotal = [];
+  this.pizzaPriceTotal;
 }
 
 Pizza.prototype.pizzaTotalPrice = function() {
@@ -21,7 +21,7 @@ Pizza.prototype.pizzaTotalPrice = function() {
   priceTopping = (this.pizzaTopping * .50)
 
   totalPrice = price + priceTopping;
-
+  this.pizzaPriceTotal = totalPrice;
   return totalPrice;
 }
 // End of Business Logic
@@ -30,7 +30,7 @@ $(document).ready(function() {
   $("form#pizzaOrder").submit(function(event) {
     event.preventDefault();
 
-    var selectedPizzaSize = $("#pizzaSizeInput").val();
+    var selectedPizzaSize = $("select#pizzaSizeInput").val();
     console.log(selectedPizzaSize);
 
     var selectedPizzaToppings = ($("input:checkbox:checked").length);
@@ -40,5 +40,9 @@ $(document).ready(function() {
     var newPizza = new Pizza(selectedPizzaSize, selectedPizzaToppings);
 
     console.log(newPizza);
+
+    var PriceOfPizza = newPizza.pizzaTotalPrice();
+
+    console.log(PriceOfPizza);
   });
 });
