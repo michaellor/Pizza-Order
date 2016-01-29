@@ -27,6 +27,28 @@ Pizza.prototype.pizzaTotalPrice = function() {
 // End of Business Logic
 
 $(document).ready(function() {
+
+  $("#addAnotherPizza").click(function() {
+    $(".form-group").append('<br><br><label for="pizzaSize">Pizza Size</label><br>' +
+                          '<select name="pizzeSize" id="pizzaSizeInput">' +
+                            '<option value="Small">Small</option>' +
+                            '<option value="Medium">Medium</option>' +
+                            '<option value="Large">Large</option>' +
+                          '</select><br>' +
+                          '<label for="Toppings">Toppings</label><br>' +
+                          '<input type="checkbox" name="toppings"> Extra Cheese' +
+                          '<input type="checkbox" name="toppings"> Pepperoni' +
+                          '<input type="checkbox" name="toppings"> Steak' +
+                          '<input type="checkbox" name="toppings"> Sausage' +
+                          '<input type="checkbox" name="toppings"> Bacon' +
+                          '<input type="checkbox" name="toppings"> Ham' +
+                          '<br>' +
+                          '<input type="checkbox" name="toppings"> Olives' +
+                          '<input type="checkbox" name="toppings"> Pineapples' +
+                          '<input type="checkbox" name="toppings"> Green Peppers');
+  })
+
+
   $("form#pizzaOrder").submit(function(event) {
     event.preventDefault();
 

@@ -12,9 +12,10 @@
     <h1>Pizza!</h1>
     <div class="row">
       <div class="col-md-6">
-        <h3>Choose Size and Toppings</h3>
+
 
         <form id="pizzaOrder">
+          <h3>Choose Size and Toppings</h3>
           <div class="form-group">
             <label for="pizzaSize">Pizza Size</label><br>
             <select name="pizzeSize" id="pizzaSizeInput">
@@ -34,7 +35,8 @@
             <input type="checkbox" name="toppings"> Pineapples
             <input type="checkbox" name="toppings"> Green Peppers
           </div>
-          <button class="btn" type="submit">Place Order</button>
+          <span class="btn btn-primary" id="addAnotherPizza">Add Another Pizza!</span>
+          <button class="btn btn-danger" type="submit">Place Order</button>
         </form>
         <div id="outputPrice">
           <hr>
