@@ -41,8 +41,10 @@ $(document).ready(function() {
 
     console.log(newPizza);
 
-    var PriceOfPizza = newPizza.pizzaTotalPrice();
+    var PriceOfPizza = newPizza.pizzaTotalPrice().toFixed(2);
 
     console.log(PriceOfPizza);
+
+    $("div#outputPrice").append("<p>$" + PriceOfPizza + "</p>");
   });
 });
