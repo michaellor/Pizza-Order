@@ -45,6 +45,6 @@ $(document).ready(function() {
 
     console.log(PriceOfPizza);
 
-    $("div#outputPrice").append("<p>$" + PriceOfPizza + "</p>");
+    $("div#outputPrice").append("<p><strong>Price: $" + PriceOfPizza + "</strong><br>Description: <br>Pizza Size: " + selectedPizzaSize + "<br>Number of Toppings: " + selectedPizzaToppings + "</p>");
   });
 });
