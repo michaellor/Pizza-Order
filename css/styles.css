@@ -1,0 +1,18 @@
+body {
+  background-image: url(http://www.motherearthnews.com/~/media/Images/MEN/Editorial/Articles/Magazine%20Articles/2012/10-01/Inexpensive%20Pizza%20Stones/m-pizza.jpg)
+}
+
+.col-md-4 {
+  background-color: brown;
+  padding: 15px;
+  margin: 10px;
+}
+
+hr {
+  display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid black;
+    margin: 1em 0;
+    padding: 0;
+}

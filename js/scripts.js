@@ -75,7 +75,10 @@ $(document).ready(function() {
 
     console.log(selectedPizzaToppings);
 
-    var newPizza = new Pizza(selectedPizzaSize, selectedPizzaToppings);
+    var selectedPizzaQuantity = $("input#numberOfPizzas").val();
+    var selectedPizzaQuantity = Math.abs(selectedPizzaQuantity);
+
+    var newPizza = new Pizza(selectedPizzaSize, selectedPizzaToppings, selectedPizzaQuantity);
 
     console.log(newPizza);
 
@@ -83,6 +86,6 @@ $(document).ready(function() {
 
     console.log(PriceOfPizza);
 
-    $("div#outputPrice").append("<p><strong>Price: $" + PriceOfPizza + "</strong><br>Description: <br>Pizza Size: " + selectedPizzaSize + "<br>Number of Toppings: " + selectedPizzaToppings + "</p>");
+    $("div#outputPrice").append("<p><strong>Price: $" + PriceOfPizza + "</strong><br>Description: <br>Pizza Size: " + selectedPizzaSize + "<br>Number of Toppings: " + selectedPizzaToppings + "<br>Quantity: " + selectedPizzaQuantity + "</p>");
   });
 });
