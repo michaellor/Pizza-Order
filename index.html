@@ -7,71 +7,72 @@
     <script src="js/scripts.js"></script>
     <title>Pizza Order</title>
   </head>
+
+
   <body>
     <div class="container">
     <h1 id="header-top"><img src="img/pizzaboxes.png" id="pizzaimage"> Very Much Good Pizza</h1>
-
-    <div class="row">
-      <div class="col-sm-4">
-        <form id="pizzaOrder">
-          <h3>Choose Size and Toppings</h3>
-          <div class="addNewPizza">
-            <div class="form-group">
-              <label for="pizzaSize">Pizza Size</label><br>
-              <select name="pizzeSize" id="pizzaSizeInput">
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-              </select>
-              <br>
-              <label for="Toppings">Toppings</label><br>
-              <input type="checkbox" name="toppings"> Extra Cheese
-              <input type="checkbox" name="toppings"> Pepperoni
-              <input type="checkbox" name="toppings"> Steak
-              <input type="checkbox" name="toppings"> Sausage
-              <input type="checkbox" name="toppings"> Bacon
-              <input type="checkbox" name="toppings"> Ham
-              <br>
-              <input type="checkbox" name="toppings"> Olives
-              <input type="checkbox" name="toppings"> Pineapples
-              <input type="checkbox" name="toppings"> Green Peppers
-              <br>
-              <label for"numberOfPizzas">Quantity</label>
-              <input type="number" class="form-inline" id="numberOfPizzas">
+      <div class="row">
+        <div class="col-sm-4">
+          <form id="pizzaOrder">
+            <h3>Choose Size and Toppings</h3>
+            <div class="addNewPizza">
+              <div class="form-group">
+                <label for="pizzaSize">Pizza Size</label><br>
+                <select name="pizzeSize" id="pizzaSizeInput">
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+                </select>
+                <br>
+                <label for="Toppings">Toppings</label><br>
+                <input type="checkbox" name="toppings"> Extra Cheese
+                <input type="checkbox" name="toppings"> Pepperoni
+                <input type="checkbox" name="toppings"> Steak
+                <input type="checkbox" name="toppings"> Sausage
+                <input type="checkbox" name="toppings"> Bacon
+                <input type="checkbox" name="toppings"> Ham
+                <br>
+                <input type="checkbox" name="toppings"> Olives
+                <input type="checkbox" name="toppings"> Pineapples
+                <input type="checkbox" name="toppings"> Green Peppers
+                <br>
+                <label for"numberOfPizzas">Quantity</label>
+                <input type="number" class="form-inline" id="numberOfPizzas">
+              </div>
             </div>
+            <span class="btn btn-primary" id="addAnotherPizza">Add Another Pizza!</span>
+            <button class="btn btn-danger" type="submit">Place Order</button>
+          </form>
+          <hr>
+          <div id="outputPrice">
           </div>
-
-          <span class="btn btn-primary" id="addAnotherPizza">Add Another Pizza!</span>
-          <button class="btn btn-danger" type="submit">Place Order</button>
-        </form>
-        <hr>
-        <div id="outputPrice">
         </div>
-      </div>
 
-      <div class="col-sm-4">
-        <form id="orderInfo">
-          <h3>Ordering Information</h3>
-          <p>How will you be receiving your order?</p>
-          <p>
-            <span id="carryout-form"><span class="glyphicon glyphicon-triangle-right"></span>Carry Out</span>
-          </p>
-          <span id="carryout-form-output"></span>
-          <p>
-            <span id="delivery-form"><span class="glyphicon glyphicon-triangle-right"></span>Delivery <em>($3.00 delivery fee)</em></span>
-          </p>
-          <span id="delivery-form-output"></span>
-        </form>
-      </div>
+        <div class="col-sm-4">
+          <form id="orderInfo">
+            <h3>Ordering Information</h3>
+            <p>How will you be receiving your order?</p>
+            <p>
+              <span id="carryout-form"><span class="glyphicon glyphicon-triangle-right"></span>Carry Out</span>
+            </p>
+            <span id="carryout-form-output"></span>
+            <p>
+              <span id="delivery-form"><span class="glyphicon glyphicon-triangle-right"></span>Delivery <em>($3.00 delivery fee)</em></span>
+            </p>
+            <span id="delivery-form-output"></span>
+          </form>
+        </div>
 
-      <div class="col-sm-4">
-        <h3>Prices</h3>
-        <ul>
-          <li>Small: $8.00</li>
-          <li>Medium: $10.00</li>
-          <li>Large: $12.00</li>
-          <li>Toppings: .50 each</li>
-        </ul>
+        <div class="col-sm-4">
+          <h3>Prices</h3>
+          <ul>
+            <li>Small: $8.00</li>
+            <li>Medium: $10.00</li>
+            <li>Large: $12.00</li>
+            <li>Toppings: .50 each</li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
