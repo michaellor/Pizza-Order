@@ -12,9 +12,7 @@
     <h1 id="header-top"><img src="img/pizzaboxes.png" id="pizzaimage"> Very Much Good Pizza</h1>
 
     <div class="row">
-      <div class="col-md-4">
-
-
+      <div class="col-sm-4">
         <form id="pizzaOrder">
           <h3>Choose Size and Toppings</h3>
           <div class="addNewPizza">
@@ -46,26 +44,27 @@
           <span class="btn btn-primary" id="addAnotherPizza">Add Another Pizza!</span>
           <button class="btn btn-danger" type="submit">Place Order</button>
         </form>
+        <hr>
         <div id="outputPrice">
-          <hr>
-          <img src="img/pizzasteve.png" id="pizzasteveimage">
         </div>
       </div>
 
-      <div class="col-md-4">
-
+      <div class="col-sm-4">
         <form id="orderInfo">
           <h3>Ordering Information</h3>
           <p>How will you be receiving your order?</p>
-
-          <p><span id="carryout-form"><span class="glyphicon glyphicon-triangle-right"></span>Carry Out</span></p>
-
-          <p><span id="delivery-form"><span class="glyphicon glyphicon-triangle-right"></span>Delivery</span></p>
+          <p>
+            <span id="carryout-form"><span class="glyphicon glyphicon-triangle-right"></span>Carry Out</span>
+          </p>
+          <span id="carryout-form-output"></span>
+          <p>
+            <span id="delivery-form"><span class="glyphicon glyphicon-triangle-right"></span>Delivery <em>($3.00 delivery fee)</em></span>
+          </p>
           <span id="delivery-form-output"></span>
         </form>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-sm-4">
         <h3>Prices</h3>
         <ul>
           <li>Small: $8.00</li>

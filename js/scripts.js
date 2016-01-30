@@ -66,7 +66,7 @@ $(document).ready(function() {
   });
 
   $("#carryout-form").one('click', function() {
-    $("#carryout-form-output").append('<br><label for="carryout-form">' +
+    $("#carryout-form-output").append('<label for="carryout-form">' +
                             '<span class="glyphicon glyphicon-earphone"></span> Phone Number:</label>' +
                             ' <input type="text" class="form-inline">' +
                             ' <br><label for="carryout-form">' +
@@ -75,12 +75,13 @@ $(document).ready(function() {
   });
 
   $("#delivery-form").one('click', function() {
-    $("#delivery-form-output").append('<br><label for="carryout-form">' +
+    $("#delivery-form-output").append('<label for="delivery-form">' +
                             '<span class="glyphicon glyphicon-earphone"></span> Phone Number:</label>' +
                             ' <input type="text" class="form-inline">' +
-                            ' <br><label for="carryout-form">' +
-                            '<span class="glyphicon glyphicon-time"></span> Pickup Time:</label>' +
+                            ' <br><label for="delivery-form">' +
+                            '<span class="glyphicon glyphicon-home"></span> Address:</label>' +
                             ' <input type="text" class="form-inline">');
+
   });
 
 
@@ -88,23 +89,17 @@ $(document).ready(function() {
     event.preventDefault();
 
     var selectedPizzaSize = $("select#pizzaSizeInput").val();
-    console.log(selectedPizzaSize);
-
     var selectedPizzaToppings = ($("input:checkbox:checked").length);
-
-    console.log(selectedPizzaToppings);
-
     var selectedPizzaQuantity = $("input#numberOfPizzas").val();
     var selectedPizzaQuantity = Math.abs(selectedPizzaQuantity);
-
     var newPizza = new Pizza(selectedPizzaSize, selectedPizzaToppings, selectedPizzaQuantity);
-
-    console.log(newPizza);
-
     var PriceOfPizza = newPizza.pizzaTotalPrice().toFixed(2);
 
-    console.log(PriceOfPizza);
-
-    $("div#outputPrice").append("<p><strong>Price: $" + PriceOfPizza + "</strong><br>Description: <br>Pizza Size: " + selectedPizzaSize + "<br>Number of Toppings: " + selectedPizzaToppings + "<br>Quantity: " + selectedPizzaQuantity + "</p>");
+    $("div#outputPrice").empty().append('<img src="img/pizzasteve.png" id="pizzasteveimage">' +
+                                        '<span id="blink-text">PIZZA!!</span>' +
+                                        '<p><strong>Price: $' + PriceOfPizza + '</strong>' +
+                                        '<br>Description: <br>Pizza Size: ' + selectedPizzaSize +
+                                        '<br>Number of Toppings: ' + selectedPizzaToppings +
+                                        '<br>Quantity: ' + selectedPizzaQuantity + '</p>');
   });
 });
